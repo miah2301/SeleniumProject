@@ -29,6 +29,7 @@ public class HomePage {
     private final By mkadElement = By.id("accordion__heading-7");
     private final By mkadElementAccordion = By.id("accordion__panel-7");
 
+
     public String getTextPrice(){
         driver.findElement(price).click();
         new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(priceAccordion));

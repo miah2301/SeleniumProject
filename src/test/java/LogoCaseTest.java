@@ -26,9 +26,7 @@ public class LogoCaseTest extends Constans{
     public void testYandexLogo(){
         LogoCase logoYandex = new LogoCase(driver);
         logoYandex.clickYandexLogo();
-        for (String tab : driver.getWindowHandles()){
-            driver.switchTo().window(tab);
-        }
+        driver.getWindowHandles().forEach(tab->driver.switchTo().window(tab));
         String ActualURL = driver.getCurrentUrl();
         Assert.assertEquals(ActualURL, yandexURL_CONST);
     }
